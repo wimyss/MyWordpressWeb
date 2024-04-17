@@ -24,7 +24,7 @@ services:
 
         image: wimys/mariadb
 
-        container_name: compose-mariadb
+        container_name: mariadb
 
         ports:
 
@@ -54,7 +54,7 @@ services:
 
         image: wimys/wordpress
 
-        container_name: compose-wordpress
+        container_name: wordpress
 
         ports:
 
