@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if ! command -v docker &> /dev/null
+then
+    echo "Docker is not installed. Please install Docker before to use the script."
+    exit
+fi
+
 apt update && apt upgrade -y
 
 cd / && touch docker-compose.yml
