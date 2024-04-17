@@ -8,7 +8,7 @@ fi
 
 apt update && apt upgrade -y
 
-cd / && touch docker-compose.yml
+cd / && mkdir dockercompose && cd /dockercompose && touch docker-compose.yml
 
 echo "version: '3.9'
 
