@@ -102,7 +102,7 @@ networks:
 
 docker compose -p wimyswordpress up -d
 
-ls
+clear
 
 echo "http://localhost"
 echo "docker-compsoe it start | Put << docker compose down >> for stop"
