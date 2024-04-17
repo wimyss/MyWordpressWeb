@@ -100,7 +100,7 @@ networks:
 
                 - subnet: 172.20.0.0/16" > docker-compose.yml
 
-docker compose -p wimyswordpress up -d && rm wget-log 
+docker compose -p wimyswordpress up -d
 
 sleep 3 && clear
 
