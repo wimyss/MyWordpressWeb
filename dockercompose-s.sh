@@ -8,7 +8,7 @@ fi
 
 apt update && apt upgrade -y
 
-cd / && mkdir dockercompose && cd /dockercompose && touch docker-compose.yml
+mkdir dockercompose && cd /dockercompose && touch docker-compose.yml
 
 echo "version: '3.9'
 
@@ -100,7 +100,7 @@ networks:
 
                 - subnet: 172.20.0.0/16" > docker-compose.yml
 
-docker compose -p wimyswordpress up -d && sudo rm ./wget-log/ 
+docker compose -p wimyswordpress up -d && rm wget-log 
 
 sleep 3 && clear
 
