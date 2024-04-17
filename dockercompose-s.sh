@@ -100,7 +100,7 @@ networks:
 
                 - subnet: 172.20.0.0/16" > docker-compose.yml
 
-docker compose up -d
+docker compose -p wimyswordpress up -d
 
 ls
 
