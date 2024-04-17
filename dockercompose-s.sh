@@ -102,7 +102,7 @@ networks:
 
 docker compose -p wimyswordpress up -d && sudo rm ./wget-log/ 
 
-sleep 10 && clear
+sleep 3 && clear
 
 echo "http://localhost"
 echo "docker-compsoe it start | Put << docker compose down >> for stop"
