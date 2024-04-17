@@ -60,9 +60,8 @@ networks:
 
 docker compose up -d
 
-echo "
 echo "http://localhost"
 echo "docker-compsoe it start | Put << docker compose down >> for stop"
-
+echo "Made by © 2024 wimyss"
 
 
