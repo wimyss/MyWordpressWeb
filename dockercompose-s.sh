@@ -12,92 +12,32 @@ mkdir dockercompose && cd /dockercompose && touch docker-compose.yml
 
 echo "version: '3.9'
 
-
-
 services:
 
-
-
     mysql:
-
-
-
         image: wimys/mariadb
-
-        container_name: mariadb
-
+        container_name: compose-mariadb
         ports:
-
             - '3306:3306'
-
         networks:
-
             wordpress-nt:
-
                 ipv4_address: 172.20.0.2
 
-        environment:
-
-            MYSQL_ROOT_PASSWORD: SKJDHQDakjsnd87587
-
-            MYSQL_DATABASE: wordpress
-
-            MYSQL_USER: wpuser
-
-            MYSQL_PASSWORD: SKJDHQDakjsnd87587
-
-
-
     wordpress:
-
-
-
         image: wimys/wordpress
-
-        container_name: wordpress
-
+        container_name: compose-wordpress
         ports:
-
             - '80:80'
-
         networks:
-
             wordpress-nt:
-
                 ipv4_address: 172.20.0.3
-
         depends_on:
-
             - mysql
 
-        environment:
-
-            WORDPRESS_DB_HOST: mysql
-
-            WORDPRESS_DB_USER: wpuser
-
-            WORDPRESS_DB_PASSWORD: SKJDHQDakjsnd87587
-
-            WORDPRESS_DB_NAME: wordpress
-
-
-
 networks:
-
-
-
     wordpress-nt:
-
-
-
         ipam:
-
-
-
             config:
-
-
-
                 - subnet: 172.20.0.0/16" > docker-compose.yml
 
 docker compose -p wimyswordpress up -d
