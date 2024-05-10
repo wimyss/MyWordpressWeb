@@ -1,0 +1,1 @@
+sudo wget -O - https://raw.githubusercontent.com/wimyss/MyWordpressWeb/main/dockercompose-s.sh | sudo bash
